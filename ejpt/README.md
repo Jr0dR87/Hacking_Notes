@@ -14,7 +14,7 @@ I recently passed the eJPT. I found it to be a fun and excellent way to solidify
 
 #### SQLi
 
-#### SQLmap
+##### SQLmap
 
 #### Directory Scanning 
 
@@ -29,3 +29,11 @@ I recently passed the eJPT. I found it to be a fun and excellent way to solidify
 ##### Unshadow
 
 ##### John the Ripper
+
+##### SSH Hacking 
+
+##### Metasploit
+
+##### Meterpreter
+
+##### Pivoting with Meterpreter 
