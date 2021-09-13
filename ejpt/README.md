@@ -7,6 +7,7 @@ I found the eJPT to be a fun and excellent way to solidify my fundentmentals in 
 I would say the bulk of my time was understanding the network around me and enumrating it and setting it up.
 
 ## Routing
+
 Setting up routing and routing tables was one of the first things I did once I began the eJPT. When I was getting ready to take the eJPT, I heard a few horror stories about students failing out right because routing on the exam didn't make sense to them. I'm here to tell you it's not that bad as long as your understand how adding a route works and how to read data to understand what is routing to where. Think what is the source to destination.
 
 Here is some useful infomation on how to get started on the exam. With the information given from various sources in the exam, map out what parts of the network you have. What communicates to what and routes to what (ie routing). What client is talking to what server? I took some time and mapped out the souces / destination IP addresses and after I felt I had a good handle of the network, I set up my routing used the commands.
@@ -22,6 +23,7 @@ ip route add 192.168.100.0/24 via 10.175.30.1
 ```
 
 ## Enumeration
+
 I can't stress how important it is to take your time and before you start hacking your little hearts out to enumrate, enumerate, and do more enumration. Do you know the OS? The version of Apache you might be attacking? Do you know if the version of SMB has a CVE? Do you know the CEO of the website your are attacking? Research! Take Notes! 
 
 ### Nmap
@@ -45,6 +47,7 @@ nmap -sV -p- -Pn 10.10.10.x
 ## Web Hacking
 
 ### ZAP
+
 Zap is one of my favorite tools. I love auotmating and speeding up my workflow and ZAP is a great way to get excellent information on web site vulnerablities. A simple and effective way to learn about a website is to open up ZAP, paste a URL and hit attack.
 
 ![alt ZAP Scan](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/zap_scan.png)
@@ -52,6 +55,7 @@ Zap is one of my favorite tools. I love auotmating and speeding up my workflow a
 You can find XSS Attacks, IDORs (Insecure Direct Object References), Sensitive files, robot.txt files, dated libaries / frameworks and so much more. ZAP is a guide in of itself. I will lsay I used ZAP on this exam and it helped me multiple times. Highly recommend brining it in your tool box come exama time.
 
 ### XSS
+
 The important part of XSS is knowing the context of where the output of your input is going. Know where the output is going to display can be a huge part in finding XSS vulnerabilities. For example, if we can put ```<h2>TEST</h2>``` in the input field and the output displays the TEST in an h2 tag, then we will most likely be able to perform XSS exploits.
 
 Inside of input fields, the following command will help find XSS.
@@ -91,10 +95,9 @@ gobuster dir -u http://192.168.0.146/ -w /usr/share/wordlists/dirbuster/director
 
 ## SMB Hacking
 
-Need to finish
+SMB allows file sharing, network browsing, and printing over a network. In our Nmap can, if we see port 139 and 445, that probably means we have SMB on the server. Useually we will be going for network file shares. 
 
 ### SMCclient
-
 
 This will list out shares.
 ```
@@ -105,6 +108,7 @@ This will attempt to connect to the share as an anonymous user. If you know of a
 smbclient //$IP/$share -U anonymous
 ```
 ## Password Cracking
+
 Password cracking played a large part when I was taking the exam. After compromising a machine, I was able to take advantage of poorly managed user accounts and was able to take hashes and user accounts from the machine and attempt to crack them on my machine. I was able to get the /etc/shadow and /etc/passwd files.
 
 ### Unshadow
@@ -127,6 +131,7 @@ john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt simple_hash
 When I see SSH open, I  always assume we need to get into the server via a means of finding credentials. For the most part, we aren't going to search out an online exploit that auto SSH us in without credientals. What I mean is I don't tend to spend much time looking for online exploits for it. I will however use brute force attacks againist it or ssh in with credentials I find in other areas such as a file share for example. 
 
 ### Hydra
+
 Using hyrda, we can brute force servers to see if we can find a user with a weak password and compromise the server.
 
 Here is a simple hyrda command that is going brute-force the jim user account using the password list rockyou.txt to see if it can find a password that will let us ssh in as root. You can add a -v for verbose output.
