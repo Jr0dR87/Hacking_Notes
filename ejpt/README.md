@@ -98,7 +98,7 @@ Need to finish
 Need to finish
 This will list out shares.
 ```
-smbclient --L ///$IP
+smbclient -L ///$IP
 ```
 This will attempt to connect to the share as an anonymous user. If you know of a user and password, swap out anonymous with a user and after you hit enter, you will be prompt for a password that you can input. If you are going the anonymous route, then just hit enter when you get the prompt to see if the share was setup to allow anonymous connections. 
 ```
