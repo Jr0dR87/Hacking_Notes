@@ -157,6 +157,7 @@ Here is an example of running Metasploit to compromise a machine. A more detaile
 - To select an module from the list, I run ```use {the number in the list}``` 
 - To see what values I need to set, I run ```options``` 
 - To set an option I run ```set {name} {value}``` Example would be ```set RHOSTS 10.10.10.50``` 
+- To begin the exploit, I run ```exploit``` 
 
 ![alt exploit](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/Bolt_metasploit_exploit.png)
 
