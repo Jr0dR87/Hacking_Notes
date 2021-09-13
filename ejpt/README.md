@@ -61,7 +61,8 @@ If we manipulate the HTML/JavaScript in the source code to perform XSS, this wou
 
 I found PortSwigger has a great cheat sheet. [PortSwigger Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet) 
 
-ZAP is a great tool that can also automate finding XSS for you. It's worth the time to open it up and do a scan with it to see if you can get easy wins.
+ZAP is a great tool that can also automate finding XSS for you. It's worth the time to open it up and do a scan with it to see if you can get easy wins. Here in the example, we can see ZAP found a reflected XSS.
+![alt xss](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/zap_xss.png)
 
 #### SQLi
 
