@@ -88,7 +88,17 @@ unshadow passwd shadow > unshadowed.txt
 
 ##### John the Ripper
 
-##### SSH Hacking 
+## SSH Hacking
+
+Normally SSH isn't that vulnerable. I tend to brush it off as sometime I can hack when I see port 22 pop up in a nmap scan. What I mean is I don't tend to spend much time looking for online exploits for it. I will however use brute force attacks againist it or ssh in with credentials I find in other areas such as a file share for example.
+
+### Hydra
+Using hyrda, we can brute force servers to see if we can find a user with a weak password and compromise the server.
+
+Here is a simple hyrda command that is going to use a list of users and the rockyou.txt password file to try and ssh in. 
+```
+hydra -L users.txt -P rockyou.txt ssh://10.10.10.55 
+```
 
 ##### Metasploit
 
