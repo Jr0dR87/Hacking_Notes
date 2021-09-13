@@ -45,6 +45,9 @@ nmap -sV -p- -Pn 10.10.10.x
 ## Web Hacking
 
 ### ZAP
+Zap is one of my favorite tools. I love auotmating and speeding up my workflow and ZAP is a great way to get excellent information on web site vulnerablities. A simple and effective way to learn about a website is to open up ZAP, paste a URL and hit attack.
+
+[alt ZAP Scan](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/zap_scan.png)
 
 ### XSS
 The important part of XSS is knowing the context of where the output of your input is going. Know where the output is going to display can be a huge part in finding XSS vulnerabilities. For example, if we can put ```<h2>TEST</h2>``` in the input field and the output displays the TEST in an h2 tag, then we will most likely be able to perform XSS exploits.
