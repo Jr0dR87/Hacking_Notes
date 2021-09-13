@@ -80,20 +80,20 @@ This will perform a gobuster scan of a website to find hidden files and director
 gobuster dir -u http://192.168.0.146/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -o gobuster_scan.txt
 ```
 
-### SMB Hacking
+## SMB Hacking
 
-##### SMCclient
+### SMCclient
 
-#### Password Cracking
+## Password Cracking
 
-##### Unshadow
+### Unshadow
 
 Unshadow will combine /etc/passwd users with /etc/shadow hashes to form one filel to crack.
 ```
 unshadow passwd shadow > unshadowed.txt
 ```
 
-##### John the Ripper
+### John the Ripper
 
 ## SSH Hacking
 
@@ -107,8 +107,8 @@ Here is a simple hyrda command that is going brute-force the jim user account us
 hydra -l jim -P rockyou.txt ssh://10.10.10.55 
 ```
 
-##### Metasploit
+## Metasploit
 
-##### Meterpreter
+## Meterpreter
 
-##### Pivoting with Meterpreter 
+## Pivoting with Meterpreter 
