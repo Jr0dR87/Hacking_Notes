@@ -95,7 +95,7 @@ Need to finish
 
 ### SMCclient
 
-Need to finish
+
 This will list out shares.
 ```
 smbclient -L ///$IP
@@ -105,8 +105,7 @@ This will attempt to connect to the share as an anonymous user. If you know of a
 smbclient //$IP/$share -U anonymous
 ```
 ## Password Cracking
-
-Need to finish
+Password cracking played a large part when I was taking the exam. After compromising a machine, I was able to take advantage of poorly managed user accounts and was able to take hashes and user accounts from the machine and attempt to crack them on my machine. I was able to get the /etc/shadow and /etc/passwd files.
 
 ### Unshadow
 
@@ -142,3 +141,12 @@ Need to finish all three
 ## Meterpreter
 
 ## Pivoting with Meterpreter 
+
+### Final Thoughts
+I hope you found this information useful. If you have any questions, you can always reach out to me on [Twitter](https://twitter.com/Jrod_R87) and I will do my best to help you out. 
+
+My final bit of advice is the following.
+ - Make sure you are comfortable with the Penetration Testing Prerequisites lab Find the Secret Server. I can't stress this enough how important it is you know routing and how to set it up.
+ - If you can complete the Penetration Testing Basics labs Black-box Penetration Test 1,2,3 with little to no issues and you understand it, I would say that's a good indicator you are ready for the exam. I found these to be a bit harder than the exam itself. This is again MY OPINION. 
+ - Make sure you map out the network, take solid notes, and take breaks when you need them. You have three days to do this. Use as much time as you need and you have access to outside resources.
+ - Have sources for cheat sheets. I love cheat sheets becaues you can't be expected to remember every way to perform an exploit. XSS has numerous ways to be exploited for example. It's not cheating yourself or the exam if you need use them.
