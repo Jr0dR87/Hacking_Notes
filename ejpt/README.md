@@ -79,6 +79,9 @@ SQL Injection is one of my favorite vunlerabiliteis to exploit. Trying to determ
 
 A lot of SQLi, XSS, SSRF, and XXE is playing around with the application to see how it will respond. It's a game of patience and drawing out how something should be interpreted on the backend server. My advice is to not just machine gun payloads into inputs for quick wins. Take your time and use cheat sheets to help learn what DB you are attacking, what the query could look like, number of columns in a table, and so on. 
 
+Some SQLi payloads I use are adding in a ' into an input field to see if I can get an easy win and break the application and get a db error message. 
+Sometimes I fill in a value and then close the statement with a '. This would look like the screenshot below.
+
 #### SQLmap
 SQlmap is an awesome tool. It does do what I mentioned not to do in the previous section and that is machine gun payloads into a field to find a SQLi vulnerablity. It does this much faster and more effectivly than you. That's the postive side of automating these attacks. The downside is it's very loud (and can be very dangous on pentest). This tool is great for eJPT, but know in the real world it can be dangeous and also very loud during a pentest. Don't use it unless you have written autorized permission to do pentesting and just know it's loud and can be disruptive.
 
