@@ -81,6 +81,11 @@ ZAP is a great tool that can also automate finding XSS for you. It's worth the t
 
 ##### Unshadow
 
+Unshadow will combine /etc/passwd users with /etc/shadow hashes to form one filel to crack.
+```
+unshadow passwd shadow > unshadowed.txt
+```
+
 ##### John the Ripper
 
 ##### SSH Hacking 
