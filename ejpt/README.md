@@ -84,7 +84,7 @@ SQlmap is an awesome tool. It does do what I mentioned not to do in the previous
 
 Here is an example of using a url and attacking the id paramater to see if it is vunerable to SQLi.
 ```
-sqlmap -u "http://10.10.73.118/vulnerabilities/sqli/?id=1&Submit=Submit&user_token=c0800c6e9142e5d17d82e3e4a84ef32f#" -p id
+Need to add example.
 ```
 
 ## Directory Scanning 
@@ -145,6 +145,8 @@ hydra -l jim -P rockyou.txt ssh://10.10.10.55
 ```
 
 ## Metasploit
+
+I'll do my best with the next three topics as they are guides in their own right. If you need more practice, TryHackMe has wonderful rooms on Metasploit. Here is one and it's free with a walkthrough! [TryHackMe Metasploit](https://tryhackme.com/room/rpmetasploit)
 
 Need to finish all three
 
