@@ -110,7 +110,7 @@ This is how the command looks to get the tables from the database owasp10.
 sqlmap -r sql_map_file -D owasp10 --tables
 ```
 
-This is how the command looks to query the database owasp10, the table accounts and dump the data out.
+This is how the command looks to query the table accounts in the  database owasp10 and dump out the data.
 ```
 sqlmap -r sql_map_file -D owasp10 -T accounts --dump
 ```
