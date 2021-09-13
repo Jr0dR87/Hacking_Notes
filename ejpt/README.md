@@ -75,8 +75,9 @@ ZAP is a great tool that can also automate finding XSS for you. It's worth the t
 ![alt xss](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/zap_xss.png)
 
 ### SQLi
+SQL Injection is one of my favorite vunlerabiliteis to exploit. Trying to determine the syntax of the SQL in the background is going to be the key in helping exploit the SQL on the backend server. Looking at a simple example, ```SELECT * FROM users WHERE id = 1``` this should pull a all information from the users table about a user with an id of 1. Now what the application does with this data once it is returned is up to the Server Side language to send back and in what layout. 
 
-Need to finish
+A lot of SQLi, XSS, SSRF, and XXE is playing around with the application to see how it will respond. It's a game of patience and drawing out how something should be interpreted on the backend server. My advice is to not just machine gun payloads into inputs for quick wins. Take your time and use cheat sheets to help learn what DB you are attacking, what the query could look like, number of columns in a table, and so on. 
 
 #### SQLmap
 
