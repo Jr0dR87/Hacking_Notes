@@ -72,7 +72,11 @@ ZAP is a great tool that can also automate finding XSS for you. It's worth the t
 
 ### SQLi
 
+Need to finish
+
 #### SQLmap
+
+Need to finish
 
 ## Directory Scanning 
 
@@ -87,9 +91,15 @@ gobuster dir -u http://192.168.0.146/ -w /usr/share/wordlists/dirbuster/director
 
 ## SMB Hacking
 
+Need to finish
+
 ### SMCclient
 
+Need to finish
+
 ## Password Cracking
+
+Need to finish
 
 ### Unshadow
 
@@ -119,6 +129,8 @@ hydra -l jim -P rockyou.txt ssh://10.10.10.55
 ```
 
 ## Metasploit
+
+Need to finish all three
 
 ## Meterpreter
 
