@@ -71,7 +71,14 @@ ZAP is a great tool that can also automate finding XSS for you. It's worth the t
 
 #### Directory Scanning 
 
+As stated earlier, we want to learn as much as we can from a target. This is active scanning since we are interacting directly with the target.
+
+This will perform a gobuster scan of a website to find hidden files and directories. the -u is for url, -w is the wordist to use to scan to see if it can find a match, -o is the output file we want to save. You can add -x and then extenions to help search. I like adding .txt and .bak in my searches because they can offten lead to old back up files or txt files with sensitve info. 
 ##### Gobuster
+
+```
+gobuster dir -u http://192.168.0.146/ -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -o gobuster_scan.txt
+```
 
 ### SMB Hacking
 
@@ -95,9 +102,9 @@ Normally SSH isn't that vulnerable. I tend to brush it off as sometime I can hac
 ### Hydra
 Using hyrda, we can brute force servers to see if we can find a user with a weak password and compromise the server.
 
-Here is a simple hyrda command that is going to use a list of users and the rockyou.txt password file to try and ssh in. 
+Here is a simple hyrda command that is going brute-force the jim user account using the password list rockyou.txt to see if it can find a password that will let us ssh in as root. You can add a -v for verbose output.
 ```
-hydra -L users.txt -P rockyou.txt ssh://10.10.10.55 
+hydra -l jim -P rockyou.txt ssh://10.10.10.55 
 ```
 
 ##### Metasploit
