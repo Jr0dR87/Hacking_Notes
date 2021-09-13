@@ -47,7 +47,21 @@ nmap -sV -p- -Pn 10.10.10.x
 #### ZAP
 
 #### XSS
-The important part of XSS is knowing the context of where the output of your input is going. Know where the output is going to display can be a huge part in finding XSS vulnerabilities. For example, if we can put <h2>TEST</h2> in the input field and the output displays the TEST in an h2 tag, then we will most likely be able to perform XSS exploits. We sometimes might need to get fancy because old faithful as I call it <script>alert(1)</script> could be filtered. This is where I turn to cheatsheets. 
+The important part of XSS is knowing the context of where the output of your input is going. Know where the output is going to display can be a huge part in finding XSS vulnerabilities. For example, if we can put <h2>TEST</h2> in the input field and the output displays the TEST in an h2 tag, then we will most likely be able to perform XSS exploits.
+
+Inside of input fields, the following command will help find XSS.
+```
+<script>alert(1)</script
+```
+If we get an alert with 1, then we have XSS. This would be reflected XSS.
+
+If we perform the command and it gets stored in a database or file on the machine and every time we visit the page and get the alert, this would be store XSS.
+
+If we manipulate the HTML/JavaScript in the source code to perform XSS, this would be DOM XSS.
+
+I found PortSwigger has a great cheat sheet. [PortSwigger Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet) 
+
+ZAP is a great tool that can also automate finding XSS for you. It's worth the time to open it up and do a scan with it to see if you can get easy wins.
 
 #### SQLi
 
