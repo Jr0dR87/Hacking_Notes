@@ -89,12 +89,21 @@ Again, a lot of these input injection attacks involve playing with the values yo
 #### SQLmap
 SQlmap is an awesome tool. It does do what I mentioned not to do in the previous section and that is machine gun payloads into a field to find a SQLi vulnerablity. It does this much faster and more effectivly than you. That's the postive side of automating these attacks. The downside is it's very loud (and can be very dangous on pentest). This tool is great for eJPT, but know in the real world it can be dangeous and also very loud during a pentest. Don't use it unless you have written autorized permission to do pentesting and just know it's loud and can be disruptive.
 
-My personal preference when it comes to using SQLmap is using Burp Suite to save out a request to the server and use that file as a param in SQLmap. 
+My personal preference when it comes to using SQLmap is using Burp Suite to save out a request to the server and use that file as a param in SQLmap. I find it to be cleaner and I have more success than ```sqlmap -u "http://vulnsitetosqli.com/?id=243"``` for example, but again this is just my approach. 
+
+Here I'll get the request I sent to the website and save it from Burp Suite by right clicking and saving item. I'll save it to my workstation.
+
+![alt request](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/saved_request.png)
+
+Here I'm using the file that holds the requests I saved from Burp Suite and I'm using the -r to read the file contents and I'm trying to get the databases.
 
 This is how the command looks to read the file and get the databases.
 ```
 sqlmap -r sql_map_file -D  
 ```
+
+This is my output.
+![alt DB](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/sqlmap_databases.png)
 
 This is how the command looks to get the tables from the database owasp10.
 ```
@@ -105,6 +114,9 @@ This is how the command looks to query the database owasp10, the table accounts 
 ```
 sqlmap -r sql_map_file -D owasp10 -T accounts --dump
 ```
+
+This is the output.
+![alt dump](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/sqlmap_account_dump.png)
 
 ## Directory Scanning 
 
