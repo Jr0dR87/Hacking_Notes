@@ -206,9 +206,38 @@ Here are some quick simple commands:
 ![alt root](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/Bolt_Becoming_Root-1.png)
 
 ## Meterpreter
+Meterpreter is a payload that will gives us a shell with commands we can use on a given system and the payload lives in memory. It works by executing a reverse shell on a target machine and connecting back to us. I like to think of it as a more ellegant nc connection.
 
-## Pivoting with Meterpreter 
+To list Meterpreter payloads, run
+```
+search meterpreter
+```
 
+The following two examples are for simple examples for linux and windows. You will need to pick the right payload for the correct architecture of the target system.
+
+To set a meterpreter payload for a windows target, run
+```
+set payload windows/meterpreter/reverse_tcp
+```
+
+To set a meterpreter payload for a linux (64 bit) target, run
+```
+payload/linux/x64/meterpreter/reverse_tcp
+```
+
+To background the meterpreter session, run 
+```
+background
+```
+
+To get back your meterpreter session run
+```
+session -i {session number}
+```
+
+```
+help 
+```
 ### Final Thoughts
 I hope you found this information useful. If you have any questions, you can always reach out to me on [Twitter](https://twitter.com/Jrod_R87) and I will do my best to help you out. 
 
