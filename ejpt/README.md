@@ -49,6 +49,8 @@ Zap is one of my favorite tools. I love auotmating and speeding up my workflow a
 
 ![alt ZAP Scan](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/zap_scan.png)
 
+You can find XSS Attacks, IDORs (Insecure Direct Object References), Sensitive files, robot.txt files, dated libaries / frameworks and so much more. ZAP is a guide in of itself. I will lsay I used ZAP on this exam and it helped me multiple times. Highly recommend brining it in your tool box come exama time.
+
 ### XSS
 The important part of XSS is knowing the context of where the output of your input is going. Know where the output is going to display can be a huge part in finding XSS vulnerabilities. For example, if we can put ```<h2>TEST</h2>``` in the input field and the output displays the TEST in an h2 tag, then we will most likely be able to perform XSS exploits.
 
