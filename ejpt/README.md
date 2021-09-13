@@ -148,7 +148,7 @@ hydra -l jim -P rockyou.txt ssh://10.10.10.55
 
 I'll do my best with the next three topics as they are guides in their own right. If you need more practice, TryHackMe has wonderful rooms on Metasploit. Here is one and it's free with a walkthrough! [TryHackMe Metasploit](https://tryhackme.com/room/rpmetasploit)
 
-Need to finish all three
+Metasploit to me has always been like Game Genie. The old device that allowed you to cheat in Nintendo games as a kid by inputing various values without having to know how the values were changing the code. Metasploit is similar. If you know the values of an exploit and can fill them in, then you can hack something. It will do the hack for you. 
 
 ## Meterpreter
 
