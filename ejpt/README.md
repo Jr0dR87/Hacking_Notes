@@ -150,7 +150,9 @@ I'll do my best with the next three topics as they are guides in their own right
 
 Metasploit to me has always been like Game Genie. The old device that allowed you to cheat in Nintendo games as a kid by inputing various values without having to know how the values were changing the code. Metasploit is similar. If you know the values of an exploit and can fill them in, then you can hack something. It will do the hack for you. 
 
-Here is an example of running Metasploit to compromise a machine. A more detailed walkthrough can be found on my [blog](https://jarrodrizor.com/bolt-writeup/)
+A detailed walkthrough of me compromising a server using Metasploit can be found on my [blog](https://jarrodrizor.com/bolt-writeup/)
+
+Here are some quick simple commands:
 
 - To start Metasploit with no banner, I run ```msfconsole -q``` 
 - To search, I use ```search {name of thing I want to exploit}``` 
@@ -160,7 +162,6 @@ Here is an example of running Metasploit to compromise a machine. A more detaile
 - To begin the exploit, I run ```exploit``` 
 
 ![alt exploit](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/Bolt_metasploit_exploit.png)
-
 ![alt options](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/Bolt_metasploit_options.png)
 ![alt root](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/Bolt_Becoming_Root-1.png)
 
