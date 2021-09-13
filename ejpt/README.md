@@ -56,7 +56,7 @@ The important part of XSS is knowing the context of where the output of your inp
 
 Inside of input fields, the following command will help find XSS.
 ```
-<script>alert(1)</script
+<script>alert(1)</script>
 ```
 If we get an alert with 1, then we have XSS. This would be reflected XSS.
 
