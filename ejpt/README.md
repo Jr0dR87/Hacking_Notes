@@ -100,7 +100,7 @@ gobuster dir -u http://192.168.0.146/ -w /usr/share/wordlists/dirbuster/director
 
 ## SMB Hacking
 
-SMB allows file sharing, network browsing, and printing over a network. In our Nmap can, if we see port 139 and 445, that probably means we have SMB on the server. Useually we will be going for network file shares. 
+SMB allows file sharing, network browsing, and printing over a network. In our Nmap can, if we see port 139 and 445, that probably means we have SMB on the server. Useually we will be going for network file shares. What I think of when I see these shares on hackable machines are we can either get in using anonymous login or we need to find credientials to get in, but they useaully always have something useful. 
 
 ### SMCclient
 
@@ -111,6 +111,15 @@ smbclient -L ///$IP
 This will attempt to connect to the share as an anonymous user. If you know of a user and password, swap out anonymous with a user and after you hit enter, you will be prompt for a password that you can input. If you are going the anonymous route, then just hit enter when you get the prompt to see if the share was setup to allow anonymous connections. 
 ```
 smbclient //$IP/$share -U anonymous
+```
+
+### Enum4Linux
+
+This is also a create tool to use for SMB enumeration.
+
+This will scan the system and should get workgroups, domains, usernames and other bits of great information that the set up is willing to publicy present. 
+```
+enum4linux -a 10.10.10.50 
 ```
 ## Password Cracking
 
