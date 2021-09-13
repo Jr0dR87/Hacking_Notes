@@ -22,7 +22,7 @@ ip route add 192.168.100.0/24 via 10.175.30.1
 ```
 
 ## Enumeration
-I can't stress how important it is to 
+I can't stress how important it is to take your time and before you start hacking your little hearts out to enumrate, enumerate, and do more enumration. Do you know the OS? The version of Apache you might be attacking? Do you know if the version of SMB has a CVE? Do you know the CEO of the website your are attacking? Research! Take Notes! 
 
 #### Nmap
 
