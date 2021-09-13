@@ -24,7 +24,7 @@ ip route add 192.168.100.0/24 via 10.175.30.1
 ## Enumeration
 I can't stress how important it is to take your time and before you start hacking your little hearts out to enumrate, enumerate, and do more enumration. Do you know the OS? The version of Apache you might be attacking? Do you know if the version of SMB has a CVE? Do you know the CEO of the website your are attacking? Research! Take Notes! 
 
-#### Nmap
+### Nmap
 
 Nmap is used to scan networks and servers for open hosts and ports.
 
@@ -42,11 +42,11 @@ This is how we can scan a server for open ports, find what version of software i
 nmap -sV -p- -Pn 10.10.10.x
 ```
 
-### Web Hacking
+## Web Hacking
 
-#### ZAP
+### ZAP
 
-#### XSS
+### XSS
 The important part of XSS is knowing the context of where the output of your input is going. Know where the output is going to display can be a huge part in finding XSS vulnerabilities. For example, if we can put <h2>TEST</h2> in the input field and the output displays the TEST in an h2 tag, then we will most likely be able to perform XSS exploits.
 
 Inside of input fields, the following command will help find XSS.
@@ -65,11 +65,11 @@ ZAP is a great tool that can also automate finding XSS for you. It's worth the t
 
 ![alt xss](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/zap_xss.png)
 
-#### SQLi
+### SQLi
 
-##### SQLmap
+#### SQLmap
 
-#### Directory Scanning 
+## Directory Scanning 
 
 As stated earlier, we want to learn as much as we can from a target. This is active scanning since we are interacting directly with the target.
 
