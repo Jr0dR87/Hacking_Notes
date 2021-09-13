@@ -150,6 +150,9 @@ I'll do my best with the next three topics as they are guides in their own right
 
 Metasploit to me has always been like Game Genie. The old device that allowed you to cheat in Nintendo games as a kid by inputing various values without having to know how the values were changing the code. Metasploit is similar. If you know the values of an exploit and can fill them in, then you can hack something. It will do the hack for you. 
 
+Here is an example of running Metasploit to compromise a machine. A more detailed walkthrough can be found on my [blog](https://jarrodrizor.com/bolt-writeup/)
+
+
 ## Meterpreter
 
 ## Pivoting with Meterpreter 
