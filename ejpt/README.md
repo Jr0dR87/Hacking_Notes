@@ -235,6 +235,7 @@ To get back your meterpreter session run
 session -i {session number}
 ```
 
+When you need to see more options in your meterpreter session, run
 ```
 help 
 ```
