@@ -152,10 +152,11 @@ Metasploit to me has always been like Game Genie. The old device that allowed yo
 
 Here is an example of running Metasploit to compromise a machine. A more detailed walkthrough can be found on my [blog](https://jarrodrizor.com/bolt-writeup/)
 
-To start Metasploit with no banner, I run ```msfconsole -q```
-To search, I use ```search {name of thing I want to exploit}```
-To select an module from the list, I run ```use {the number in the list}```
-To see what values I need to set, I run ```options```
+To start Metasploit with no banner, I run ```msfconsole -q``` 
+To search, I use ```search {name of thing I want to exploit}``` 
+To select an module from the list, I run ```use {the number in the list}``` 
+To see what values I need to set, I run ```options``` 
+To set an option I run ```set {name} {value}``` Example would be ```set RHOSTS 10.10.10.50``` 
 
 ![alt exploit](https://github.com/JarrodRizor/Hacking_Notes/blob/main/ejpt/screenshots/Bolt_metasploit_exploit.png)
 
