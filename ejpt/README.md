@@ -95,6 +95,12 @@ unshadow passwd shadow > unshadowed.txt
 
 ### John the Ripper
 
+John the Ripper is a great password cracker and can help us find get passwords to user accounts on systems. Here we are using john and trying to crack an MD5 hash using --format=Raw-MD5 and trying to crack it with the passwords in rockyou.txt. The file simple_hash is the file containg our hash to crack. 
+
+```
+john --format=Raw-MD5 --wordlist=/usr/share/wordlists/rockyou.txt simple_hash
+```
+
 ## SSH Hacking
 
 Normally SSH isn't that vulnerable. I tend to brush it off as sometime I can hack when I see port 22 pop up in a nmap scan. What I mean is I don't tend to spend much time looking for online exploits for it. I will however use brute force attacks againist it or ssh in with credentials I find in other areas such as a file share for example.
