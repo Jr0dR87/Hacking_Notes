@@ -89,9 +89,21 @@ Again, a lot of these input injection attacks involve playing with the values yo
 #### SQLmap
 SQlmap is an awesome tool. It does do what I mentioned not to do in the previous section and that is machine gun payloads into a field to find a SQLi vulnerablity. It does this much faster and more effectivly than you. That's the postive side of automating these attacks. The downside is it's very loud (and can be very dangous on pentest). This tool is great for eJPT, but know in the real world it can be dangeous and also very loud during a pentest. Don't use it unless you have written autorized permission to do pentesting and just know it's loud and can be disruptive.
 
-Here is an example of using a url and attacking the id paramater to see if it is vunerable to SQLi.
+My personal preference when it comes to using SQLmap is using Burp Suite to save out a request to the server and use that file as a param in SQLmap. 
+
+This is how the command looks to read the file and get the databases.
 ```
-Need to add example.
+sqlmap -r sql_map_file -D  
+```
+
+This is how the command looks to get the tables from the database owasp10.
+```
+sqlmap -r sql_map_file -D owasp10 --tables
+```
+
+This is how the command looks to query the database owasp10, the table accounts and dump the data out.
+```
+sqlmap -r sql_map_file -D owasp10 -T accounts --dump
 ```
 
 ## Directory Scanning 
