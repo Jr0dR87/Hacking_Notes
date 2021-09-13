@@ -6,6 +6,8 @@ I found the eJPT to be a fun and excellent way to solidify my fundentmentals in 
 
 I would say the bulk of my time was understanding the network around me and enumrating it and setting it up.
 
+It's hard to show notes on this, but please research and understand how to read pcap files in wireshark. Watch the Using Wireshark video and do the Data Exfiltration lab and make sure you know how to read data packets.
+
 ## Routing
 
 Setting up routing and routing tables was one of the first things I did once I began the eJPT. When I was getting ready to take the eJPT, I heard a few horror stories about students failing out right because routing on the exam didn't make sense to them. I'm here to tell you it's not that bad as long as your understand how adding a route works and how to read data to understand what is routing to where. Think what is the source to destination.
