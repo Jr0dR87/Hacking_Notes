@@ -4,6 +4,15 @@ Notes on Buffer Overflows
 Need to run Immunity Debugger as Admin.
 Make sure it's running.
 
+## Steps to Conduct a Buffer Overflow
+1. Spiking
+2. Fuzzing
+3. Finding the Offset
+4. Overwriting the EIP
+5. Finding Bad Characters
+6. Finding the Right Module
+7. Generating Shellcode
+
 
 ## Configure Mona
 #### Set up working folder
