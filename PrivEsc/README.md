@@ -29,3 +29,13 @@ Find connections to and from other machines
 
 #### Check Service Accounts ####
 ``` cat /etc/passwd ```
+
+### Priv Esc (Linux) ###
+
+#### See what current user can execute with sudo ####
+``` sudo -l```
+
+#### Find SUID Binaires ####
+``` find / -perm -4000 -type f 2>/dev/null ```
+
+
