@@ -120,6 +120,11 @@ Once we run this, we use the output and update the exploit.py script payload var
 ```
 !mona compare -f C:\mona\oscp\bytearray.bin -a (ESP Address)
 ```
+##### Mona Modules to find vuln path
+```
+!mona modules
+```
+
 ##### Using Mona Modules to find ESP JMP
 ```
 !mona find -s "\xff\xe4" -m {vuln path}
