@@ -90,7 +90,7 @@ except:
 ```
 When we have the payload from the patter_create.rb script, we copy that into the payload variable and run the exploit script again. We then need to use Mona to help finish finding the EIP Offset.
 ```
-!mona findmsp -distance (The number of bytes from the Fuzzer.py script + 400) 
+/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l {The number of bytes from the Fuzzer.py script + 400} -q {EIP Register}
 ```
 
 ###
@@ -104,7 +104,7 @@ retn = "BBBB"
 
 Create Working Directory for Mona
 ```
-!mona config -set workingfolder c:\mona%p
+!mona config -set workingfolder c:\mona
 ```
 
 The following Mona command will generate a bytearray and exclude the null byte (\x00) by default. * Note the location of the bytearray.bin file that is generated (if the working folder was set per the Mona Configuration section of this guide, then the location should be C:\mona\oscp\bytearray.bin).
