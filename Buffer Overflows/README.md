@@ -109,7 +109,7 @@ Create Working Directory for Mona
 
 The following Mona command will generate a bytearray and exclude the null byte (\x00) by default. * Note the location of the bytearray.bin file that is generated (if the working folder was set per the Mona Configuration section of this guide, then the location should be C:\mona\oscp\bytearray.bin).
 ```
-!mona bytearray -b "\x00"
+!mona bytearray -cpb "\x00"
 ```
 
 ##### Purpose of the Script
