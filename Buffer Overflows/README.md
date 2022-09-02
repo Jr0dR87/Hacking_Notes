@@ -134,3 +134,5 @@ Once we run this, we use the output and update the exploit.py script payload var
 ```
 !mona find -s "\xff\xe4" -m {vuln path}
 ```
+Add the value in reverse (little endian) in \x format in the payload. 
+Then set a break point for the JMP ESP to make sure payload hits it.
