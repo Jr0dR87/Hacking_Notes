@@ -1,0 +1,4 @@
+# Windows Enumeration
+
+### Listing Installed Windows Binaries
+Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}
